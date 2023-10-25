@@ -25,6 +25,7 @@
   --marketplaceColor: #5d2bc0; /* hsl(260, 63%, 46%) */
   --marketplaceColorLight: #7748d5; /* hsl(260, 63%, 56%), +10L from marketplaceColor */
   --marketplaceColorDark: #492296; /* hsl(260, 63%, 26%), -10L from marketplaceColor */
+  --colorPastelPink: pink;
 
   /* Colors used for different functions (like error texts) */
 
@@ -556,7 +557,7 @@ textarea {
 /* ================ Plain global CSS glasses ================ */
 
 /**
- * Note: even though these reflect element styles, 
+ * Note: even though these reflect element styles,
  * these are below element styles to allow overwrites using classes.
  */
 
@@ -925,7 +926,7 @@ textarea {
  * For actual buttons, use components: <Button>, <PrimaryButton>, <SecondaryButton>
  *
  * To create button look-and-feel for links, etc. combine button classes in CSS Modules:
- * 
+ *
  * <Button>:
  *   composes: buttonDefault from global;
  * <PrimaryButton>:
