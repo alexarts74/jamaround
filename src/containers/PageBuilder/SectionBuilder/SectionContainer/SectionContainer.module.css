@@ -7,9 +7,14 @@
   width: 100%;
   position: relative;
 
-  &:nth-of-type(odd) {
+  &:nth-of-type(even) {
     background-color: var(--colorPastelPink);
   }
+
+}
+
+#mission {
+  background-color: var(--colorYellow);
 }
 
 .sectionContent {
