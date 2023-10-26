@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0 12px 0 0;
+  padding: 0 128px 0 0;
 
   /* fill */
   background-color: var(--colorWhite);
@@ -65,11 +65,11 @@
 }
 
 .topbarSearchWithLeftPadding {
-  padding-left: 24px;
+  padding-left: 48px;
   height: var(--topbarHeightDesktop);
 
   @media (--viewportLarge) {
-    padding-left: 34px;
+    padding-left: 48px;
   }
 }
 

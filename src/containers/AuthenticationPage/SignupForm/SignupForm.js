@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 import { FormattedMessage, injectIntl, intlShape } from '../../../util/reactIntl';
 import * as validators from '../../../util/validators';
-import { Form, PrimaryButton, FieldTextInput } from '../../../components';
+import { Form, PrimaryButton, FieldTextInput, FieldCheckbox } from '../../../components';
 
 import css from './SignupForm.module.css';
 
@@ -78,22 +78,11 @@ const SignupFormComponent = props => (
       const submitInProgress = inProgress;
       const submitDisabled = invalid || submitInProgress;
 
+
       return (
         <Form className={classes} onSubmit={handleSubmit}>
           <div>
-            <FieldTextInput
-              type="email"
-              id={formId ? `${formId}.email` : 'email'}
-              name="email"
-              autoComplete="email"
-              label={intl.formatMessage({
-                id: 'SignupForm.emailLabel',
-              })}
-              placeholder={intl.formatMessage({
-                id: 'SignupForm.emailPlaceholder',
-              })}
-              validate={validators.composeValidators(emailRequired, emailValid)}
-            />
+
             <div className={css.name}>
               <FieldTextInput
                 className={css.firstNameRoot}
@@ -132,6 +121,22 @@ const SignupFormComponent = props => (
                 )}
               />
             </div>
+
+            <FieldTextInput
+              className={css.password}
+              type="email"
+              id={formId ? `${formId}.email` : 'email'}
+              name="email"
+              autoComplete="email"
+              label={intl.formatMessage({
+                id: 'SignupForm.emailLabel',
+              })}
+              placeholder={intl.formatMessage({
+                id: 'SignupForm.emailPlaceholder',
+              })}
+              validate={validators.composeValidators(emailRequired, emailValid)}
+            />
+
             <FieldTextInput
               className={css.password}
               type="password"
@@ -146,7 +151,22 @@ const SignupFormComponent = props => (
               })}
               validate={passwordValidators}
             />
+
+            <FieldCheckbox
+              className={css.password}
+              type="establishment"
+              id={formId ? `${formId}.establishment` : 'establishment'}
+              name="establishment"
+              autoComplete="only-if-you-re-a-establishment"
+              label={intl.formatMessage({
+                id: 'Etablissement',
+              })}
+              placeholder={intl.formatMessage({
+                id: 'SignupForm.establishmentPlaceholder',
+              })}
+            />
           </div>
+
 
           <div className={css.bottomWrapper}>
             {termsAndConditions}
